@@ -41,7 +41,7 @@ export default {
     createChapter () {
       const id = this.greatestChapterId + 1
       this.$store.commit('createNewChapter', {
-        chapterTitle: '',
+        chapterTitle: 'Chapter ' + id,
         chapterSubTitle: 'Chapter ' + id,
         chapterId: id,
         chapterContent: 'Start Typing...'

@@ -23,7 +23,7 @@ export default createStore({
     },
     greatestChapterId: (state) => {
       const greatestId = state.story.reduce((max, chapter) => (chapter.chapterId > max ? chapter.chapterId : max),
-        state.story[0].chapterId
+        0
       )
       return greatestId
     }
@@ -62,6 +62,12 @@ export default createStore({
 
     createNewChapter (state, chapter) {
       state.story.push(chapter)
+    },
+    removeChapter (state, payload) {
+      const id = payload.id
+      const chapter = state.story.map(chapter => chapter.chapterId).indexOf(id)
+      state.story.splice(chapter, 1)
+      // state.story.splice(chapter, 1)
     }
   },
   actions: {},

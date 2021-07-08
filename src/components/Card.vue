@@ -1,12 +1,16 @@
 <template>
   <div
     class="card"
-    :class="{ 'active': active }"
-  >
-    <input v-if="subTitle != null" type="text" v-model="subTitle">
-    <input v-if="title != null" type="text" v-model="title">
+    :class="{ 'active': active }">
 
-    <button v-if="!chapterContent">Add New</button>
+    <div class="card__form">
+      <input v-if="subTitle != null" type="text" v-model="subTitle">
+      <input v-if="title != null" type="text" v-model="title">
+    </div>
+
+    <div class="card__delete">
+      <div @click="deleteChapter(this.id)">X</div>
+    </div>
 
   </div>
 </template>
@@ -18,6 +22,12 @@ export default {
   props: {
     active: Boolean,
     id: Number
+  },
+
+  methods: {
+    deleteChapter (id) {
+      this.$store.commit('removeChapter', { id: this.id })
+    }
   },
 
   computed: {
