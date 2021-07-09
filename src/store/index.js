@@ -2,24 +2,18 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    story: [
-      {
-        chapterTitle: 'The First Chapter',
-        chapterSubTitle: 'Chapter 1',
-        chapterId: 1,
-        chapterContent: 'uhuhuhuhuhu'
-      },
-      {
-        chapterTitle: 'The Second Chapter',
-        chapterSubTitle: 'Chapter 2',
-        chapterId: 2,
-        chapterContent: 'kjldkjsadkj'
-      }
-    ]
+    story: []
   },
   getters: {
     activeChapter: (state) => (id) => {
       return state.story.find(chapter => chapter.chapterId === id)
+    },
+    checkValidChapter: (state) => (id) => {
+      if (state.story.find(chapter => chapter.chapterId === id)) {
+        return true
+      } else {
+        return false
+      }
     },
     greatestChapterId: (state) => {
       const greatestId = state.story.reduce((max, chapter) => (chapter.chapterId > max ? chapter.chapterId : max),
