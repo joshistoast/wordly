@@ -51,10 +51,10 @@ export default {
     },
     subTitle: {
       get () {
-        return this.chapterContent.chapterSubTitle
+        return this.chapterContent.chapterHeader
       },
-      set (chapterSubTitle) {
-        this.$store.commit('updateChapterSubTitle', { id: this.id, chapterSubTitle })
+      set (chapterHeader) {
+        this.$store.commit('updateChapterHeader', { id: this.id, chapterHeader })
       }
     }
   }

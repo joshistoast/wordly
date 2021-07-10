@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 v-if="chapter.chapterTitle">{{ chapter.chapterTitle }}</h1>
-    <h4 v-if="chapter.chapterSubTitle">{{ chapter.chapterSubTitle }}</h4>
+    <h4 v-if="chapter.chapterHeader">{{ chapter.chapterHeader }}</h4>
 
     <WordPad />
 

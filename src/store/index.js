@@ -46,12 +46,12 @@ export default createStore({
           : chapter
       })
     },
-    updateChapterSubTitle (state, { id, chapterSubTitle }) {
+    updateChapterHeader (state, { id, chapterHeader }) {
       state.story = state.story.map(chapter => {
         return chapter.chapterId === id
           ? {
             ...chapter,
-            chapterSubTitle
+            chapterHeader
           }
           : chapter
       })
