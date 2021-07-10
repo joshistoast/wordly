@@ -17,7 +17,6 @@ import Explorer from '@/components/Explorer'
 
 export default {
   name: 'App',
-
   components: {
     Explorer
   }
