@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1 v-if="chapter.chapterTitle">{{ chapter.chapterTitle }}</h1>
-    <h4 v-if="chapter.chapterHeader">{{ chapter.chapterHeader }}</h4>
+    <h1>
+      <template v-if="!chapter.chapterTitle">{{ chapter.chapterHeader }}</template>
+      <template v-else-if="chapter.chapterTitle">{{ chapter.chapterTitle }}</template>
+    </h1>
+    <h4 v-if="chapter.chapterHeader && chapter.chapterTitle">{{ chapter.chapterHeader }}</h4>
 
     <WordPad />
 
