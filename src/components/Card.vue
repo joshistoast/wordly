@@ -4,13 +4,15 @@
     :class="{ 'active': active }">
 
     <div class="card__form">
-      <input v-if="subTitle != null" type="text" v-model="subTitle">
-      <input v-if="title != null" type="text" v-model="title">
+      <input v-if="subTitle != null" type="text" v-model="subTitle" :placeholder="`Chapter ${chapterContent.chapterId}`"><br>
+      <input v-if="title != null" type="text" v-model="title" placeholder="Chapter Title">
     </div>
 
     <div class="card__delete">
       <div @click="deleteChapter(this.id)">X</div>
     </div>
+
+    <hr>
 
   </div>
 </template>
@@ -25,8 +27,13 @@ export default {
   },
 
   methods: {
+    // TODO: re-route to next greatest/lowest chapter ID based on index
     deleteChapter (id) {
-      this.$store.commit('removeChapter', { id: this.id })
+      if (confirm('Delete Chapter')) {
+        this.$store.commit('removeChapter', { id: this.id })
+      } else {
+        return false
+      }
     }
   },
 

@@ -1,6 +1,6 @@
 <template>
   <div class="wordpad" id="wordpad">
-    <textarea v-model="content"></textarea>
+    <textarea v-model="content" placeholder="Start Typing..."></textarea>
   </div>
 </template>
 

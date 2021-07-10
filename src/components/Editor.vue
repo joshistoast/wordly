@@ -5,14 +5,15 @@
 
     <WordPad />
 
-    <ChapterNotes />
+    <Toolbar />
 
   </div>
 </template>
 
 <script>
 import WordPad from '@/components/WordPad'
-import ChapterNotes from '@/components/ChapterNotes'
+import Toolbar from '@/components/Toolbar'
+
 export default {
   name: 'Editor',
 
@@ -23,7 +24,7 @@ export default {
   },
   components: {
     WordPad,
-    ChapterNotes
+    Toolbar
   },
   computed: {
     chapter () {
