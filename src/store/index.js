@@ -53,6 +53,16 @@ export default createStore({
           : chapter
       })
     },
+    updateChapterNotes (state, { id, chapterNotes }) {
+      state.story = state.story.map(chapter => {
+        return chapter.chapterId === id
+          ? {
+            ...chapter,
+            chapterNotes
+          }
+          : chapter
+      })
+    },
 
     createNewChapter (state, chapter) {
       state.story.push(chapter)

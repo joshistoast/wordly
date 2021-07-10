@@ -1,15 +1,18 @@
 <template>
   <div>
-    <h1>{{ chapter.chapterTitle }}</h1>
-    <h4>{{ chapter.chapterSubTitle }}</h4>
+    <h1 v-if="chapter.chapterTitle">{{ chapter.chapterTitle }}</h1>
+    <h4 v-if="chapter.chapterSubTitle">{{ chapter.chapterSubTitle }}</h4>
 
     <WordPad />
+
+    <ChapterNotes />
 
   </div>
 </template>
 
 <script>
 import WordPad from '@/components/WordPad'
+import ChapterNotes from '@/components/ChapterNotes'
 export default {
   name: 'Editor',
 
@@ -19,7 +22,8 @@ export default {
     }
   },
   components: {
-    WordPad
+    WordPad,
+    ChapterNotes
   },
   computed: {
     chapter () {

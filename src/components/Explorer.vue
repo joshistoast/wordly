@@ -44,7 +44,8 @@ export default {
         chapterTitle: 'Chapter ' + id,
         chapterSubTitle: 'Chapter ' + id,
         chapterId: id,
-        chapterContent: 'Start Typing...'
+        chapterContent: '',
+        chapterNotes: ''
       })
 
       this.$router.push({ name: 'Chapter', params: { id } })
