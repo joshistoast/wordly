@@ -27,13 +27,14 @@ export default {
   },
 
   methods: {
-    // TODO: re-route to next greatest/lowest chapter ID based on index
     deleteChapter (id) {
       if (confirm('Delete Chapter')) {
         this.$store.commit('removeChapter', { id: this.id })
       } else {
         return false
       }
+
+      this.$router.push({ name: 'App' })
     }
   },
 
