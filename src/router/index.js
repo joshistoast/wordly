@@ -1,22 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import Home from '@/views/Home'
 import App from '@/views/App'
 import Editor from '@/components/Editor'
 
 const routes = [
   {
     path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/app',
     name: 'App',
     component: App,
     children: [
       {
-        path: '/:id',
+        path: '/app/:id',
         name: 'Chapter',
         component: Editor
       }
     ]
   }
-  // Redirect when route has nonexistent chapter id
 ]
 
 const router = createRouter({

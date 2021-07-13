@@ -30,11 +30,10 @@ export default {
     deleteChapter (id) {
       if (confirm('Delete Chapter')) {
         this.$store.commit('removeChapter', { id: this.id })
+        this.$router.push({ name: 'App' })
       } else {
         return false
       }
-
-      this.$router.push({ name: 'App' })
     }
   },
 
