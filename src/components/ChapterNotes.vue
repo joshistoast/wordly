@@ -35,6 +35,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='postcss'>
+.notes {}
 </style>

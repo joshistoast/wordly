@@ -8,11 +8,10 @@
       <input v-if="title != null" type="text" v-model="title" placeholder="Chapter Title">
     </div>
 
+    <!-- TODO: Hide delete when mobile -->
     <div class="card__delete">
       <div @click="deleteChapter(this.id)">X</div>
     </div>
-
-    <hr>
 
   </div>
 </template>
@@ -30,7 +29,7 @@ export default {
     deleteChapter (id) {
       if (confirm('Delete Chapter')) {
         this.$store.commit('removeChapter', { id: this.id })
-        this.$router.push({ name: 'App' })
+        this.$router.replace({ path: '/app' })
       } else {
         return false
       }
@@ -61,6 +60,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang='postcss'>
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--dark-grey);
+    border: 1px solid rgba(#fff, 0.05);
+    padding: 1em;
+    border-radius: var(--global-radius);
+    margin: 0 0.5em;
+    min-width: 200px;
+    max-width: 300px;
+
+    &__form {
+      input {
+        color: inherit;
+        font-family: inherit;
+        background: transparent;
+        border: none;
+      }
+    }
+    &__delete {}
+  }
 
 </style>

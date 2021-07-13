@@ -1,5 +1,9 @@
 <template>
-  <div class="explorer" id="explorer">
+  <div class="explorer">
+
+    <div class="explorer__actions">
+      <!-- TODO: Add menu open/close/add chapter/delete chapter. -->
+    </div>
 
     <div class="explorer__chapters">
 
@@ -10,9 +14,9 @@
         :active="true"
         @click="pushChapter(chapter.chapterId)"
       />
-      <button @click="createChapter">+ New Chapter</button>
 
     </div>
+    <button @click="createChapter">+ New Chapter</button>
 
     <div class="explorer__backdrop"></div>
   </div>
@@ -55,6 +59,28 @@ export default {
 
 </script>
 
-<style>
+<style lang='postcss'>
+
+  .explorer {
+    padding-top: 1em;
+
+    &__actions {}
+
+    &__chapters {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      scrollbar-width: none;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    .explorer__chapters {
+      flex-direction: column;
+    }
+  }
 
 </style>
