@@ -145,6 +145,7 @@ export default {
       border-color: transparent;
       background: transparent;
       z-index: 1;
+      cursor: pointer;
 
       &__content {
         z-index: 1;

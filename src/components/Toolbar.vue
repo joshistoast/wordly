@@ -98,6 +98,7 @@ export default {
       align-items: center;
       padding: 0.65em;
       border-radius: var(--global-radius);
+      cursor: pointer;
 
       span {
         margin: 0 0.35em 0 0.5em;
