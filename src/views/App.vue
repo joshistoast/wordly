@@ -37,7 +37,6 @@ export default {
 
   @media screen and (min-width: 1024px) {
     .app__container {
-      margin-top: 1em;
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .explorer__container {

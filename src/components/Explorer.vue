@@ -178,6 +178,7 @@ export default {
       transition: all 100ms ease;
       overflow-y: scroll;
       scrollbar-width: none;
+      margin-top: 2em;
 
       &:hover {
         box-shadow: 0px 20px 35px rgba(#000,0.15);
