@@ -9,8 +9,8 @@
         <span class="chapter-title" v-if="title != null" type="text">{{ title }}</span>
       </template>
       <template v-else>
-        <input class="chapter-subtitle" v-if="subTitle != null" type="text" v-model="subTitle" :placeholder="`Chapter ${chapterContent.chapterId}`"><br>
-        <input class="chapter-title" v-if="title != null" type="text" v-model="title" placeholder="Chapter Title">
+        <input autocomplete="off" class="chapter-subtitle" v-if="subTitle != null" type="text" v-model="subTitle" :placeholder="`Chapter ${chapterContent.chapterId}`"><br>
+        <input autocomplete="off" class="chapter-title" v-if="title != null" type="text" v-model="title" placeholder="Chapter Title">
       </template>
     </div>
 
