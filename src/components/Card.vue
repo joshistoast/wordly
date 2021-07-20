@@ -94,6 +94,7 @@ export default {
     font-family: var(--font-sans-serif);
   }
   .chapter-title {
+    font-family: var(--font-serif);
     color: white;
     font-size: 1.2rem;
     font-weight: 900;
