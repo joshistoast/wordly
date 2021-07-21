@@ -1,7 +1,7 @@
 <template>
   <div class="notes" id="notes">
     <div class="notes__header">
-      Author's Notes
+      Chapter Notes
     </div>
     <div class="notes__content">
       <textarea v-model="notesContent" placeholder="Keep your chapter notes here"></textarea>
