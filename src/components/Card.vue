@@ -219,7 +219,7 @@ export default {
         background: var(--light-grey);
         opacity: 0;
         z-index: 0;
-        transition: transform 100ms ease, opacity 70ms linea, background 100ms linear;
+        transition: transform 100ms ease, opacity 70ms linear, background 100ms linear;
       }
 
       &:hover::after {
