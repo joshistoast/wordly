@@ -6,10 +6,13 @@ Future plans for this app
 - [ ] Dedicated word search
 - [ ] Custom fonts picker
 - [ ] Custom App Themes
+- [ ] Electron
 
 ---
 Roadmap to initial release
 
-- [ ] Fix Mobile Styling
 - [ ] Fix routing issue
 - [ ] User Testing
+- [ ] Add Book title somewhere
+- [ ] Next/Previous Buttons
+- [ ] Splash Screen

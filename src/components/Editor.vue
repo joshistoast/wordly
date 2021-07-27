@@ -41,6 +41,12 @@ export default {
 
 <style lang='postcss' scoped>
 
+  @media screen and (max-width: 1023px) {
+    .heading {
+      margin-top: 90px;
+    }
+  }
+
   .editor {
     position: relative;
     height: calc(100% - 100px);

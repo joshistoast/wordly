@@ -138,6 +138,12 @@ export default {
 
   /* Desktop Styles */
   @media screen and (min-width: 1024px) {
+
+    .chapter-title,.chapter-subtitle {
+      outline: none;
+      padding: 0;
+    }
+
     .card {
       position: relative;
       width: 100%;
@@ -164,6 +170,7 @@ export default {
         opacity: 0;
         transform: scale(0.8);
         transition: all 100ms ease-out;
+        pointer-events: none;
         background: linear-gradient(270deg, #373740 0%, #373740 24.33%, rgba(55, 55, 64, 0.719681) 66.71%, rgba(55, 55, 64, 0) 100%);
       }
       &__actions__list {
@@ -179,6 +186,7 @@ export default {
         width: 48px;
         height: 48px;
         z-index: 999;
+        pointer-events: auto;
       }
       .action::before {
         content: '';

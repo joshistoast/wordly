@@ -35,6 +35,16 @@ export default {
     display: grid;
   }
 
+  @media screen and (max-width: 1023px) {
+    .app__container {
+      height: 100vh;
+    }
+    .explorer__container {
+      position: absolute;
+      z-index: 999;
+    }
+  }
+
   @media screen and (min-width: 1024px) {
     .app__container {
       grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -128,7 +128,6 @@ export default {
       &__chapters {
         display: flex;
         flex-direction: row;
-        position: absolute;
         top: 6.5em;
         left: 0;
         align-items: center;
