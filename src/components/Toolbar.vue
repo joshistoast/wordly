@@ -6,17 +6,15 @@
     </template>
 
     <div class="toolbar">
-      <!-- <div class="toolbar__group">
-        <div class="toolbar__group__action">
-          <Icon icon='Bold'/>
+
+      <div class="toolbar__group">
+        <div
+          @click="prevChapter()"
+          class="toolbar__group__action">
+          <Icon icon='Arrow Left'/>
         </div>
-        <div class="toolbar__group__action">
-          <Icon icon='Italic'/>
-        </div>
-        <div class="toolbar__group__action">
-          <Icon icon='Underline'/>
-        </div>
-      </div> -->
+      </div>
+
       <div class="toolbar__group">
         <div
           @click="toggleNotes()"
@@ -25,12 +23,14 @@
           <Icon icon='Notepad'/>
           <span>Notes</span>
         </div>
-        <!-- <div
-          @click="toggleSearch()"
-          class="toolbar__group__action"
-          :class="{ active: searchOpen }">
-          <Icon icon='Search'/>
-        </div> -->
+      </div>
+
+      <div class="toolbar__group">
+        <div
+          @click="nextChapter()"
+          class="toolbar__group__action">
+          <Icon icon='Arrow Right'/>
+        </div>
       </div>
     </div>
 
@@ -47,7 +47,7 @@ export default {
   data () {
     return {
       notesOpen: false,
-      searchOpen: false
+      currentChapterID: parseInt(this.$route.params.id)
     }
   },
 
@@ -57,13 +57,16 @@ export default {
   },
 
   methods: {
-    toggleSearch () {
-      this.searchOpen = !this.searchOpen
-      this.notesOpen = false
-    },
     toggleNotes () {
       this.notesOpen = !this.notesOpen
       this.searchOpen = false
+    },
+
+    nextChapter () {
+      this.$router.push({ name: 'Chapter', params: { id: this.currentChapterID + 1 } })
+    },
+    prevChapter () {
+      this.$router.push({ name: 'Chapter', params: { id: this.currentChapterID - 1 } })
     }
   }
 }
@@ -91,6 +94,9 @@ export default {
       }
       &:first-child {
         margin-right: 1em;
+      }
+      &:last-child {
+        margin-left: 1em;
       }
     }
     &__group__action {
