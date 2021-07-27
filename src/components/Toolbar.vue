@@ -9,6 +9,7 @@
 
       <div class="toolbar__group">
         <div
+          v-if="!isFirstChapter"
           @click="prevChapter()"
           class="toolbar__group__action">
           <Icon icon='Arrow Left'/>
@@ -27,6 +28,7 @@
 
       <div class="toolbar__group">
         <div
+          v-if="!isLastChapter"
           @click="nextChapter()"
           class="toolbar__group__action">
           <Icon icon='Arrow Right'/>
@@ -56,6 +58,23 @@ export default {
     Icon
   },
 
+  computed: {
+    isFirstChapter () {
+      if (this.currentChapterID === 1) {
+        return true
+      } else {
+        return false
+      }
+    },
+    isLastChapter () {
+      if (this.currentChapterID === this.$store.getters.greatestChapterId) {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
+
   methods: {
     toggleNotes () {
       this.notesOpen = !this.notesOpen
@@ -63,10 +82,18 @@ export default {
     },
 
     nextChapter () {
-      this.$router.push({ name: 'Chapter', params: { id: this.currentChapterID + 1 } })
+      if (!this.isLastChapter) {
+        this.$router.push({ name: 'Chapter', params: { id: this.currentChapterID + 1 } })
+      } else {
+        return false
+      }
     },
     prevChapter () {
-      this.$router.push({ name: 'Chapter', params: { id: this.currentChapterID - 1 } })
+      if (!this.isFirstChapter) {
+        this.$router.push({ name: 'Chapter', params: { id: this.currentChapterID - 1 } })
+      } else {
+        return false
+      }
     }
   }
 }
