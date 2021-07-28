@@ -43,7 +43,7 @@ export default {
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 640px) {
     .nav {
       display: flex
     }

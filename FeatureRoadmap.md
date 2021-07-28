@@ -7,12 +7,11 @@ Future plans for this app
 - [ ] Custom fonts picker
 - [ ] Custom App Themes
 - [ ] Electron
+- [ ] Offline Mode
+- [ ] Users can make multiple stories
 
 ---
 Roadmap to initial release
 
 - [ ] Fix routing issue
 - [ ] User Testing
-- [ ] Add Book title somewhere
-- [ ] Next/Previous Buttons
-- [ ] Splash Screen
