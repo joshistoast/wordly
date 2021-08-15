@@ -168,18 +168,19 @@ export default {
       position: relative;
       width: var(--explorer-width);
       height: 100%;
-      background: var(--dark-grey);
+      background: transparent;
       border: 1px solid var(--light-grey);
       flex-direction: column;
       padding: 0.5em;
       border-radius: calc(var(--global-radius) + 0.35em);
-      box-shadow: 0px 10px 20px rgba(#000,0.15);
-      transition: all 100ms ease;
+      /* box-shadow: 0px 10px 20px rgba(#000,0.15); */
+      transition: background 120ms ease, box-shadow 200ms linear;
       overflow-y: scroll;
       scrollbar-width: none;
       margin-top: 2em;
 
       &:hover {
+        background: var(--dark-grey);
         box-shadow: 0px 20px 35px rgba(#000,0.15);
       }
     }

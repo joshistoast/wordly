@@ -55,7 +55,7 @@ export default {
       width: 100%;
       outline: none;
       border: none;
-      height: 100%;
+      height: calc(100% - 70px);
       line-height: 2;
 
       font-family: var(--font-serif);

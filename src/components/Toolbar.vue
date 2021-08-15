@@ -7,9 +7,8 @@
 
     <div class="toolbar">
 
-      <div class="toolbar__group">
+      <div class="toolbar__group"  v-if="!isFirstChapter">
         <div
-          v-if="!isFirstChapter"
           @click="prevChapter()"
           class="toolbar__group__action">
           <Icon icon='Arrow Left'/>
@@ -26,9 +25,8 @@
         </div>
       </div>
 
-      <div class="toolbar__group">
+      <div class="toolbar__group" v-if="!isLastChapter">
         <div
-          v-if="!isLastChapter"
           @click="nextChapter()"
           class="toolbar__group__action">
           <Icon icon='Arrow Right'/>

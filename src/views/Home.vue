@@ -2,8 +2,8 @@
   <div class="home" id="home">
     <div class="splash">
       <div class="splash__header">
-        <h1>Wordly.</h1>
-        <span>Write your stories easier. Free.</span>
+        <h1>Wordly<span class="splash__header__decoration">.</span></h1>
+        <span class="splash__header__desc">Write your stories easier. Free.</span>
       </div>
       <Changelog></Changelog>
       <div class="splash__buttons">
@@ -55,13 +55,18 @@ export default {
       color: white;
       text-align: center;
 
+      &__decoration {
+        font: inherit;
+        color: var(--primary)
+      }
+
       h1 {
         font-family: var(--font-serif);
         font-weight: 900;
         font-size: 3.5rem;
         margin-bottom: 0.25em;
       }
-      span {
+      &__desc {
         font-family: var(--font-sans-serif);
         font-weight: 600;
         font-size: 1.5rem;

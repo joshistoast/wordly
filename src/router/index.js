@@ -4,6 +4,8 @@ import Home from '@/views/Home'
 import App from '@/views/App'
 import Editor from '@/components/Editor'
 
+import Error from '@/views/Error'
+
 const routes = [
   {
     path: '/',
@@ -21,6 +23,11 @@ const routes = [
         component: Editor
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: Error,
+    name: 'Error'
   }
 ]
 

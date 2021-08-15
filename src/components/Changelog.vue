@@ -22,6 +22,14 @@ export default {
             'Initial Release!',
             'Please report any bugs to @joshwcorbett on Instagram'
           ]
+        },
+        {
+          version: 'Beta 0.2',
+          changes: [
+            'Quality of Life Design Changes',
+            'Fixed 404 on page refresh',
+            'New dedicated 404 Page'
+          ]
         }
       ]
     }
@@ -43,9 +51,9 @@ export default {
     border: 1px solid rgba(#fff, 0.05);
     border-radius: var(--global-radius);
     color: white;
-    min-width: 350px;
-    width: 35vw;
-    max-width: 600px;
+    min-width: 400px;
+    width: 40vw;
+    max-width: 650px;
     margin: 3em 0;
     transition: background 120ms ease, box-shadow 200ms linear;
 
